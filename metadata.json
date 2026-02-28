@@ -1,0 +1,5 @@
+{
+  "name": "UniBazzar",
+  "description": "An OSU-exclusive campus rental platform for sharing tangible resources like chargers, tools, and study materials.",
+  "requestFramePermissions": ["camera", "geolocation"]
+}

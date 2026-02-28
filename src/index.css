@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-osu-scarlet: #BB0000;
+  --color-osu-gray: #666666;
+  --color-osu-light-gray: #F1F1F1;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans;
+  }
+}
+
+.osu-gradient {
+  background: linear-gradient(135deg, #BB0000 0%, #880000 100%);
+}
+
+.searching-animation {
+  @apply relative flex items-center justify-center;
+}
+
+.searching-animation::before {
+  content: '';
+  @apply absolute w-32 h-32 border-4 border-osu-scarlet/20 rounded-full animate-ping;
+}
+
+.searching-animation::after {
+  content: '';
+  @apply absolute w-24 h-24 border-4 border-osu-scarlet/40 rounded-full animate-pulse;
+}
